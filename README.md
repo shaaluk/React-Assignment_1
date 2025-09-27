@@ -1,30 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bags Website
 
-## Getting Started
+A responsive e-commerce platform showcasing a curated collection of bags, backpacks, and accessories. Built with React, Axios, and Tailwind CSS, this project offers a seamless shopping experience across devices.
 
-First, run the development server:
+🔗 Live Demo: [bagswebsite.netlify.app](https://bagswebsite.netlify.app/)
 
-```bash
-pnpm dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Dynamic Product Display**: Fetches product data from the [Fake Store API](https://fakestoreapi.com/products) and displays up to 12 items per page.
+- **Responsive Design**: Optimized for mobile, tablet, and desktop views using Tailwind CSS.
+- **Pagination**: Navigate through product pages with a user-friendly interface.
+- **Interactive UI**: Includes features like adding items to the cart and viewing product details.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📸 Screenshots
 
-To learn more about Next.js, take a look at the following resources:
+![Homepage](public/screenshots/Screenshot_bags1.png)
+*Browse a variety of bags and accessories.*
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Product Page](public/screenshots/Scr_bags2.png)
+*View detailed information about each product.*
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⚙️ Tech Stack
+
+- **Frontend**: React, Tailwind CSS
+- **State Management**: React's useState and useEffect hooks
+- **API**: Axios for data fetching
+- **Deployment**: Netlify
+
+---
+
+## 🚀 Getting Started
+
+To run this project locally:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/shaaluk/bags-website.git
+   cd bags-website
