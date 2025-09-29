@@ -18,7 +18,7 @@ export default function Header() {
           <MdOutlineShoppingBag size={26} />
         </div>
       </header>
-      <div className="flex justify-center gap-14 text-sm text-biege pb-10">
+      <div className="flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-14 text-xs sm:text-sm text-beige pb-6 sm:pb-10">
         <p>Bags</p>
         <p>Travel</p>
         <p>Accessories</p>
