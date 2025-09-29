@@ -1,30 +1,52 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { IoMdSearch } from "react-icons/io";
 import { MdOutlinePersonOutline } from "react-icons/md";
 import { FaRegBookmark } from "react-icons/fa6";
 import { MdOutlineShoppingBag } from "react-icons/md";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       <header className="w-full p-6 flex items-center justify-between text-beige">
-        <h3 className="font-comme tracking-[0.55em]">TANN TRIM </h3>
+        <h3 className="font-comme tracking-[0.55em]">TANN TRIM</h3>
+
         <div className="flex items-center gap-5 text-beige">
-          <IoMdSearch size={26} />
-          <MdOutlinePersonOutline size={28} />
-          <FaRegBookmark size={22} />
-          <MdOutlineShoppingBag size={26} />
+          <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <IoMdClose size={28} /> : <GiHamburgerMenu size={26} />}
+          </button>
+
+          <IoMdSearch size={26} className="hidden md:block" />
+          <MdOutlinePersonOutline size={28} className="hidden md:block" />
+          <FaRegBookmark size={22} className="hidden md:block" />
+          <MdOutlineShoppingBag size={26} className="hidden md:block" />
         </div>
       </header>
-      <div className="flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-14 text-xs sm:text-sm text-beige pb-6 sm:pb-10">
+
+      {/* Desktop Nav */}
+      <div className="hidden md:flex justify-center gap-14 text-sm text-beige pb-10">
         <p>Bags</p>
         <p>Travel</p>
         <p>Accessories</p>
         <p>Gifting</p>
         <p>Jewelery</p>
       </div>
+
+      {/* Mobile Menu Drawer */}
+      {menuOpen && (
+        <div className="md:hidden flex flex-col items-center gap-6 text-base text-beige pb-6 bg-black/90 absolute top-16 left-0 w-full z-50">
+          <p>Bags</p>
+          <p>Travel</p>
+          <p>Accessories</p>
+          <p>Gifting</p>
+          <p>Jewelery</p>
+        </div>
+      )}
     </>
   );
 }
