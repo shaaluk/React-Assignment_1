@@ -17,7 +17,7 @@ export default function Header() {
         <h3 className="font-comme tracking-[0.55em]">TANN TRIM</h3>
 
         <div className="flex items-center gap-5 text-beige">
-          <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+          <button className="lg:hidden" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <IoMdClose size={28} /> : <GiHamburgerMenu size={26} />}
           </button>
 
@@ -29,7 +29,7 @@ export default function Header() {
       </header>
 
       {/* Desktop Nav */}
-      <div className="hidden md:flex justify-center gap-14 text-sm text-beige pb-10">
+      <div className="hidden lg:flex justify-center gap-14 text-sm text-beige pb-10">
         <p>Bags</p>
         <p>Travel</p>
         <p>Accessories</p>
